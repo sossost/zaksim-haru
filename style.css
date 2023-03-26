@@ -20,11 +20,6 @@ body {
     min-height: 100vh;
 }
 
-div {
-    /* width: 100%; */
-    /* height: 100px; */
-    /* border: 1px solid lightcoral;   */
-}
 .header {
     grid-area: header;
     background-color: #AAC4FF;
@@ -65,6 +60,53 @@ h1{
     grid-area: todayState;
     border: 2px solid #AAC4FF;
     border-radius: 20px;
+    display: grid;  
+    grid-template-columns: repeat(1, 1fr); 
+    grid-template-rows: 100px 100px auto;
+    gap: 10px; 
+}
+div.todayState h2{
+    background-color: #d4e0fc;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+}
+.todayMood{
+    padding: 10px;
+    font-size: 20px;
+    
+}
+.emoji{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+}
+.todayScore{
+    padding: 10px;
+    font-size: 20px;
+}
+.score{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+}
+.diary{
+    padding: 10px;
+    font-size: 20px;
+}
+.diaryTxt{
+    height: 80%;
+    padding: 10px;
+}
+#diaryTxt{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #d4e0fc;
 }
 .plant{
     grid-area: plant;
