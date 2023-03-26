@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Daheng';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_02@1.0/Daheng.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Daheng';
+    display: grid;
+    grid-template-areas: 
+    "header header header header header"
+    ". todayTask oftenTask oftenTask ."
+    ". todayTask todayState plant ."
+    ". wiseTalk todayState plant ."
+    "footer footer footer footer footer";
+    grid-template-rows: 100px auto auto auto 80px; 
+    grid-template-columns: 250px auto auto auto 250px;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+div {
+    /* width: 100%; */
+    /* height: 100px; */
+    /* border: 1px solid lightcoral;   */
+}
+.header {
+    grid-area: header;
+    background-color: #AAC4FF;
+}
+h1{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+}
+
+/* /* .login {
+    border: 1px red solid;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px; 
+} */
+
+.todayTask {
+    grid-area: todayTask;
+    border: 2px solid #AAC4FF;
+    border-radius: 20px;
+}
+
+.oftenTask {
+    grid-area: oftenTask;
+    border: 2px solid #AAC4FF;
+    border-radius: 20px;
+}
+
+.wiseTalk{
+    grid-area: wiseTalk;
+    border: 2px solid #AAC4FF;
+    border-radius: 20px;
+}
+.todayState{
+    grid-area: todayState;
+    border: 2px solid #AAC4FF;
+    border-radius: 20px;
+}
+.plant{
+    grid-area: plant;
+    border: 2px solid #AAC4FF;
+    border-radius: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #AAC4FF
+}
