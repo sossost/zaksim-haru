@@ -97,6 +97,8 @@ div.todayState h2{
 .diary{
     padding: 10px;
     font-size: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .diaryTxt{
     height: 80%;
