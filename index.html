@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="kr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"> 
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style/modal.css" />
+    <script src="./src/JaksimToday.js" defer></script>
     <!-- reset css -->
     <title>작심 하루</title>
-</head>
-<body>
+  </head>
+  <body>
+    <template id="modal_template">
+      <div class="backdrop"></div>
+      <div class="jaksim_today_modal">
+        <div class="jaksim_today_modal_close_bth">x</div>
+        <form action="" class="jaksim_today_modal_form">
+          <div class="jaksim_today_modal_title">
+            <h3>작심 추가하기</h3>
+          </div>
+          <div class="jaksim_today_modal_color_check">
+            <div class="color_check_btn water">물주기</div>
+            <div class="color_check_btn sun">햇빛</div>
+            <div class="color_check_btn pill">영양제</div>
+          </div>
+          <div class="jaksim_today_modal_input">
+            <input type="text" placeholder="오늘의 작심을 입력해주세요." />
+          </div>
+          <div class="jaksim_today_modal_submit_btn">
+            <button>추가</button>
+          </div>
+        </form>
+      </div>
+    </template>
+    <!-- 모달창 영역 -->
+
     <div class="header">
-        <h1>작심 하루</h1>
-        <div class="login"></div>
+      <h1>작심 하루</h1>
+      <div class="login"></div>
     </div>
     <div class="todayTask">
-        <h2><br>작심 Today</h2>
+      <h2><br />작심 Today</h2>
+      <button class="btn">추가</button>
     </div>
     <div class="oftenTask">
-        <h2><br>자주쓰는 작심's</h2>
+      <h2><br />자주쓰는 작심's</h2>
     </div>
     <div class="wiseTalk">
-        <h2><br>오늘의 명언</h2>
+      <h2><br />오늘의 명언</h2>
     </div>
     <div class="todayState">
-        <div class="todayMood">
-            <h2>오늘의 기분</h2>
-            <div class="emoji">
-                😁 😐 🙁 😡
-            </div>
+      <div class="todayMood">
+        <h2>오늘의 기분</h2>
+        <div class="emoji">😁 😐 🙁 😡</div>
+      </div>
+      <div class="todayScore">
+        <h2>오늘의 점수</h2>
+        <div class="score">85점</div>
+      </div>
+      <div class="diary">
+        <h2>오늘의 일기</h2>
+        <div class="diaryTxt">
+          <input type="text" name="diarytxt" id="diaryTxt" />
         </div>
-        <div class="todayScore">
-            <h2>오늘의 점수</h2>
-            <div class="score">85점</div>
-        </div>
-        <div class="diary">
-            <h2>오늘의 일기</h2>
-            <div class="diaryTxt">
-                <input type="text" name="diarytxt" id="diaryTxt">
-            </div>
-        </div>
+      </div>
     </div>
     <div class="plant"></div>
     <div class="footer"></div>
-</body>
+  </body>
 </html>
