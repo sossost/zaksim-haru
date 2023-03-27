@@ -8,21 +8,17 @@
 body {
     font-family: 'Daheng';
     display: grid;
-    grid-template-areas: 
-    "header header header header header"
-    ". todayTask oftenTask oftenTask ."
-    ". todayTask todayState plant ."
-    ". wiseTalk todayState plant ."
-    "footer footer footer footer footer";
-    grid-template-rows: 100px auto auto auto 80px; 
-    grid-template-columns: 250px auto auto auto 250px;
-    gap: 20px;
+    grid-template-columns: atuo;
+    grid-template-rows: 100px repeat(9, 55px) 56px; 
+    gap: 10px;
     min-height: 100vh;
 }
 
+/* 헤더 부분 css */
 .header {
-    grid-area: header;
-    background-color: #AAC4FF;
+    grid-column: 1 / 10;
+    grid-row: 1;
+    background-color: #CBF5EB;
 }
 h1{
     position: relative;
@@ -31,71 +27,76 @@ h1{
     transform: translateY(-50%);
     font-size: 30px;
 }
-
-/* /* .login {
+/* .login {
     border: 1px red solid;
     border-radius: 10px;
     width: 30px;
     height: 30px; 
 } */
 
+/* 헤더 부분 css 끝 */
+
+/* 작심 today부분 css */
 .todayTask {
-    grid-area: todayTask;
-    border: 2px solid #AAC4FF;
+    grid-column: 2 / 4;
+    grid-row: 2 / 9;
+    border: 2px solid #00ffd140;
     border-radius: 20px;
 }
 
+/* 자주쓰는 작심 css */
 .oftenTask {
-    grid-area: oftenTask;
-    border: 2px solid #AAC4FF;
+    grid-column: 4 / 9;
+    grid-row: 2 / 7;
+    border: 2px solid #00ffd140;
     border-radius: 20px;
 }
 
+/* 오늘의 명언 css */
 .wiseTalk{
-    grid-area: wiseTalk;
-    border: 2px solid #AAC4FF;
+    grid-column: 2 / 4;
+    grid-row: 9 / 11;
+    border: 2px solid #00ffd140;
     border-radius: 20px;
 }
+
+/* 오늘의 상태부분 css */
 .todayState{
-    grid-area: todayState;
-    border: 2px solid #AAC4FF;
+    grid-column: 4 / 6;
+    grid-row: 7 / 11;
+    border: 2px solid #00ffd140;
     border-radius: 20px;
     display: grid;  
     grid-template-columns: repeat(1, 1fr); 
-    grid-template-rows: 100px 100px auto;
-    gap: 10px; 
+    grid-template-rows: 30px 30px auto;
+    gap: 5px; 
+    padding: 10px;
 }
 div.todayState h2{
-    background-color: #d4e0fc;
+    background-color: #00ffd140;
+    display: inline-block;
     border-radius: 10px;
     text-align: center;
     padding: 5px;
 }
+.todayMood > h2, .todayScore > h2{
+    width: 100px;
+}
 .todayMood{
-    padding: 10px;
     font-size: 20px;
-    
 }
 .emoji{
-    position: relative;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 50px;
+    display: inline-block;
 }
 .todayScore{
-    padding: 10px;
+    display: inline-block;
     font-size: 20px;
 }
 .score{
-    position: relative;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
+    display: inline-block;
+
 }
 .diary{
-    padding: 10px;
     font-size: 20px;
     display: flex;
     flex-direction: column;
@@ -108,15 +109,19 @@ div.todayState h2{
     height: 100%;
     width: 100%;
     border-radius: 10px;
-    border: 1px solid #d4e0fc;
+    border: 1px solid #00ffd140;
 }
+
+/* 식물 부분 css */
 .plant{
-    grid-area: plant;
-    border: 2px solid #AAC4FF;
+    grid-column: 6 / 9;
+    grid-row: 7 / 11;
+    border: 2px solid #00ffd140;
     border-radius: 20px;
 }
 
 .footer {
-    grid-area: footer;
-    background-color: #AAC4FF
+    grid-column: 1 / 10;
+    grid-row: 11;
+    background-color: #CBF5EB
 }
