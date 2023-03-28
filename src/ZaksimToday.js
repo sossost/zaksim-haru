@@ -1,6 +1,6 @@
 import { Modal } from "./ModalControl.js";
 
-/* 모달창 띄우는 기능 */
+/* 작심 Today 입력 */
 const addZaksimTodayBtn = document.querySelector(".btn");
 const backdrop = document.querySelector(".backdrop");
 const modalCloseBtn = document.querySelector(".jaksim_today_modal_close_bth");
@@ -21,4 +21,4 @@ modalCloseBtn.addEventListener("click", () => {
 backdrop.addEventListener("click", () => {
   modal.hide();
 });
-//////////////////////////////
+//////////////////////

@@ -73,23 +73,18 @@
   font-size: 14px;
   font-weight: 400;
   color: rgb(155, 155, 155);
+  cursor: pointer;
 }
 
 .color_check_btn:hover {
-  border-color: #2fb999;
-  cursor: pointer;
+  border-color: #39d1ad;
 }
 
 .clicked {
-  background-color: #45d6b4;
+  background-color: #39d1ad;
   color: white;
-  border: 2px solid #45d6b4;
-}
-
-.sun:hover {
-  cursor: pointer;
-  border: 2px solid #ffeab2;
-  color: #ffeab2;
+  border: 2px solid #39d1ad;
+  cursor: default;
 }
 
 .jaksim_today_modal_input_div {
