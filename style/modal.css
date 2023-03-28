@@ -75,7 +75,24 @@
   color: rgb(155, 155, 155);
 }
 
-.water {
+.color_check_btn:hover {
+  border-color: #2fb999;
+  cursor: pointer;
+}
+
+.water_clicked {
+  background-color: #45d6b4;
+  color: white;
+  border: 2px solid #45d6b4;
+}
+
+.sun_clicked {
+  background-color: #45d6b4;
+  color: white;
+  border: 2px solid #45d6b4;
+}
+
+.pill_clicked {
   background-color: #45d6b4;
   color: white;
   border: 2px solid #45d6b4;
@@ -87,7 +104,7 @@
   color: #ffeab2;
 }
 
-.jaksim_today_modal_input {
+.jaksim_today_modal_input_div {
   width: 240px;
   padding: 3px 8px;
   box-sizing: border-box;
@@ -96,23 +113,24 @@
   margin-bottom: 20px;
 }
 
-.jaksim_today_modal_input:focus-within {
+.jaksim_today_modal_input_div:focus-within {
   border: 2px solid #2fb999;
 }
 
-.jaksim_today_modal_input > input:focus {
+.jaksim_today_modal_input:focus {
   outline: none;
 }
 
-.jaksim_today_modal_input > input::placeholder {
+.jaksim_today_modal_input::placeholder {
   color: rgb(189, 189, 189);
 }
 
-.jaksim_today_modal_input > input {
+.jaksim_today_modal_input {
   width: 220px;
   height: 32px;
   font-size: 16px;
   border: none;
+  color: #2fb999;
 }
 
 .jaksim_today_modal_submit_btn {

@@ -1,33 +1,90 @@
+/* 모달창 컨트롤 클래스 */
 class Modal {
   constructor() {
-    this.modalTemplateEl = document.getElementById("modal_template");
+    this.modalEl = document.querySelector(".jaksim_today_modal");
+    this.backdropEl = document.querySelector(".backdrop");
   }
 
-  /* Template 태그에 있는 요소들을 가져옴 */
-
   show() {
-    console.log(this.hidemodalTemplateEl.content);
-    const modalElements = document.importNode(
-      this.modalTemplateEl.content,
-      true
-    );
-    /* 상수에 modalTemplateEl의 document fragment를 자식까지 포함해서 복제 */
-
-    this.modalElement = modalElements.querySelector(".jaksim_today_modal");
-    this.backdropElement = modalElements.querySelector(".backdrop");
-    /* 모달과 백드롭 엘리먼트를 각각 this.엘리먼트들에게 저장 */
-
-    document.body.insertAdjacentElement("afterbegin", this.modalElement);
-    document.body.insertAdjacentElement("afterbegin", this.backdropElement);
-    /* body 첫번째 자식으로 모달과 백드롭을 삽입 */
+    this.modalEl.style.display = "flex";
+    this.backdropEl.style.display = "flex";
   }
 
   hide() {
-    document.body.removeChild(this.modalElement);
-    document.body.removeChild(this.backdropElement);
-    this.modalElement = null;
-    this.backdropElement = null;
-
-    /* body안의 모달과 백드롭 엘리먼트들을 제거 그 후 this.엘리먼트들 초기화 */
+    this.modalEl.style.display = "none";
+    this.backdropEl.style.display = "none";
   }
 }
+///////////////////////////////
+
+/* 모달창 띄우는 기능 */
+const addZaksimTodayBtn = document.querySelector(".btn");
+const backdrop = document.querySelector(".backdrop");
+const modalCloseBtn = document.querySelector(".jaksim_today_modal_close_bth");
+
+const modal = new Modal();
+
+// 모달창 띄울 버튼
+addZaksimTodayBtn.addEventListener("click", () => {
+  modal.show();
+});
+
+// 모달창 x버튼 눌러서 닫기
+modalCloseBtn.addEventListener("click", () => {
+  modal.hide();
+});
+
+// 모달창 외부 백드롭 영역 눌러서 닫기
+backdrop.addEventListener("click", () => {
+  modal.hide();
+});
+//////////////////////////////
+
+/* 라디오버튼 선택 기능 */
+const waterFitureBtn = document.querySelector("#water");
+const sunFitureBtn = document.querySelector("#sun");
+const pillFitureBtn = document.querySelector("#pill");
+const fitureInputEl = document.querySelector(".jaksim_today_modal_color_check");
+
+const waterClickHandler = () => {
+  waterFitureBtn.classList.add("water_clicked");
+  sunFitureBtn.classList.remove("sun_clicked");
+  pillFitureBtn.classList.remove("pill_clicked");
+  fitureInputEl.setAttribute("value", "water");
+};
+
+const sunClickHandler = () => {
+  waterFitureBtn.classList.remove("water_clicked");
+  sunFitureBtn.classList.add("sun_clicked");
+  pillFitureBtn.classList.remove("pill_clicked");
+  fitureInputEl.setAttribute("value", "sun");
+};
+
+const pillClickHandler = () => {
+  waterFitureBtn.classList.remove("water_clicked");
+  sunFitureBtn.classList.remove("sun_clicked");
+  pillFitureBtn.classList.add("pill_clicked");
+  fitureInputEl.setAttribute("value", "pill");
+};
+// 선택한 특성의 value는 fitureInputEl의 value에 저장
+
+waterFitureBtn.addEventListener("click", waterClickHandler);
+sunFitureBtn.addEventListener("click", sunClickHandler);
+pillFitureBtn.addEventListener("click", pillClickHandler);
+///////////////////////////////////////////////////////
+
+/* 모달창 제출 버튼 */
+const modalSubmitBtn = document.querySelector(".jaksim_today_modal_submit_btn");
+const modalSubmitHandler = (e) => {
+  e.preventDefault();
+  const zaksimInputValue = document.querySelector(
+    ".jaksim_today_modal_input"
+  ).value;
+  const zaksimFitureValue = fitureInputEl.getAttribute("value");
+
+  console.log(zaksimInputValue, zaksimFitureValue);
+};
+
+modalSubmitBtn.addEventListener("click", modalSubmitHandler);
+
+///////////////////////////////
