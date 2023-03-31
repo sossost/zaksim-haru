@@ -1,4 +1,4 @@
-export class Modal {
+class Modal {
   constructor() {
     this.modalEl = document.querySelector(".jaksim_today_modal");
     this.backdropEl = document.querySelector(".backdrop");
@@ -14,3 +14,11 @@ export class Modal {
     this.backdropEl.style.display = "none";
   }
 }
+
+export const showModal = () => {
+  new Modal().show();
+};
+
+export const hideModal = () => {
+  new Modal().hide();
+};

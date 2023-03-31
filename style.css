@@ -1,31 +1,32 @@
 @font-face {
-    font-family: 'Daheng';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_02@1.0/Daheng.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Daheng";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_02@1.0/Daheng.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    font-family: 'Daheng';
-    display: grid;
-    grid-template-columns: atuo;
-    grid-template-rows: 100px repeat(9, 55px) 56px; 
-    gap: 10px;
-    min-height: 100vh;
+  font-family: "Daheng";
+  display: grid;
+  grid-template-columns: atuo;
+  grid-template-rows: 100px repeat(9, 55px) 56px;
+  gap: 10px;
+  min-height: 100vh;
 }
 
 /* 헤더 부분 css */
 .header {
-    grid-column: 1 / 10;
-    grid-row: 1;
-    background-color: #CBF5EB;
+  grid-column: 1 / 10;
+  grid-row: 1;
+  background-color: #cbf5eb;
 }
-h1{
-    position: relative;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 30px;
+h1 {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
 }
 /* .login {
     border: 1px red solid;
@@ -38,90 +39,129 @@ h1{
 
 /* 작심 today부분 css */
 .todayTask {
-    grid-column: 2 / 4;
-    grid-row: 2 / 9;
-    border: 2px solid #00ffd140;
-    border-radius: 20px;
+  grid-column: 2 / 4;
+  grid-row: 2 / 9;
+  border: 2px solid #00ffd140;
+  border-radius: 20px;
 }
 
 /* 자주쓰는 작심 css */
 .oftenTask {
-    grid-column: 4 / 9;
-    grid-row: 2 / 6;
-    border: 2px solid #00ffd140;
-    border-radius: 20px;
+  grid-column: 4 / 9;
+  grid-row: 2 / 6;
+  border: 2px solid #00ffd140;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 /* 오늘의 명언 css */
-.wiseTalk{
-    grid-column: 2 / 4;
-    grid-row: 9 / 11;
-    border: 2px solid #00ffd140;
-    border-radius: 20px;
+.wiseTalk {
+  grid-column: 2 / 4;
+  grid-row: 9 / 11;
+  border: 2px solid #00ffd140;
+  border-radius: 20px;
 }
 
 /* 오늘의 상태부분 css */
-.todayState{
-    grid-column: 4 / 6;
-    grid-row: 6 / 11;
-    border: 2px solid #00ffd140;
-    border-radius: 20px;
-    display: grid;  
-    grid-template-columns: repeat(1, 1fr); 
-    grid-template-rows: 30px 30px auto;
-    gap: 5px; 
-    padding: 10px;
+.todayState {
+  grid-column: 4 / 7;
+  grid-row: 6 / 11;
+  border: 2px solid #00ffd140;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 30px 30px auto;
+  gap: 5px;
+  padding: 10px;
 }
-div.todayState h2{
-    background-color: #00ffd140;
-    display: inline-block;
-    border-radius: 10px;
-    text-align: center;
-    padding: 5px;
+div.todayState h2 {
+  background-color: #00ffd140;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
 }
-.todayMood > h2, .todayScore > h2{
-    width: 100px;
+.todayMood > h2,
+.todayScore > h2 {
+  width: 100px;
 }
-.todayMood{
-    font-size: 20px;
+.todayMood {
+  font-size: 20px;
 }
-.emoji{
-    display: inline-block;
+.emoji {
+  display: inline-block;
 }
-.todayScore{
-    display: inline-block;
-    font-size: 20px;
+.todayScore {
+  display: inline-block;
+  font-size: 20px;
 }
-.score{
-    display: inline-block;
-
+.score {
+  display: inline-block;
 }
-.diary{
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
+.diary {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
-.diaryTxt{
-    height: 80%;
-    padding: 10px;
+.diaryTxt {
+  height: 80%;
+  padding: 10px;
 }
-#diaryTxt{
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid #00ffd140;
+#diaryTxt {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #00ffd140;
 }
 
 /* 식물 부분 css */
-.plant{
-    grid-column: 6 / 9;
-    grid-row: 6 / 11;
-    border: 2px solid #00ffd140;
-    border-radius: 20px;
+.plant {
+  grid-column: 7 / 9;
+  grid-row: 6 / 11;
+  border: 2px solid #00ffd140;
+  border-radius: 20px;
 }
 
 .footer {
-    grid-column: 1 / 10;
-    grid-row: 11;
-    background-color: #CBF5EB
+  grid-column: 1 / 10;
+  grid-row: 11;
+  background-color: #cbf5eb;
+}
+
+.jaksim_today_li {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.jaksim_today_li:hover {
+  cursor: pointer;
+}
+
+.water {
+  background-color: #b2ffe3;
+}
+
+.sun {
+  background-color: #ffeab2;
+}
+
+.pill {
+  background-color: #ffe2f4;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.jaksim_today_ul {
+  margin-left: 10px;
+}
+
+.jaksim_today_checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  justify-content: center;
+  text-align: center;
 }
