@@ -1,0 +1,57 @@
+div.todayState h2 {
+  background-color: #00ffd140;
+  display: inline-block;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+}
+.todayMood > h2,
+.todayScore > h2 {
+  width: 100px;
+}
+.todayMood {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.emoji_list {
+  display: inline-block;
+  font-size: 24px;
+}
+
+.emoji {
+  margin-left: 10px;
+  filter: brightness(1) invert(0) sepia(1) hue-rotate(0deg) saturate(0);
+  cursor: pointer;
+}
+
+.selected_emoji {
+  margin-left: 10px;
+  filter: none;
+  font-size: 26px;
+}
+
+.todayScore {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.score {
+  display: inline-block;
+  margin-left: 20px;
+}
+.diary {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.diaryTxt {
+  padding: 8px;
+}
+#diaryTxt {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #00ffd140;
+}

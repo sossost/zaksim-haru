@@ -1,0 +1,11 @@
+div.wiseTalk h2 {
+  background-color: #00ffd140;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+.nowText {
+  display: inline-block;
+  font-size: 20px;
+}

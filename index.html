@@ -12,9 +12,15 @@
     <link rel="stylesheet" href="./style/modal.css" />
     <link rel="stylesheet" href="./style/FrequentJaksim.css" />
     <link rel="stylesheet" href="./style/JaksimToday.css" />
+    <link rel="stylesheet" href="./style/EvaluationToday.css" />
+    <link rel="stylesheet" href="./style/wisetalkToday.css" />
     <!-- <link rel="stylesheet" href="./style/jaksimToday.css" /> -->
-    <script type="module" src="./src/jaksim.js"></script>
+    <script type="module" src="./src/index.js"></script>
+    <script type="module" src="./src/jaksimToday.js"></script>
+    <script type="module" src="./src/FrequentJaksim.js"></script>
     <script type="module" src="./src/jaksimInputModal.js" defer></script>
+    <script src="./src/wiseTalkToday.js"></script>
+    <script type="module" src="./src/EvaluationToday.js"></script>
     <!-- reset css -->
     <title>작심 하루</title>
   </head>
@@ -50,7 +56,8 @@
     </div>
     <!-- 모달창 영역 -->
     <div class="header">
-      <h1>작심 하루</h1>
+      <button class="add_jaksim_today_btn">작심 추가</button>
+      <div class="title"><h1>작심 하루</h1></div>
       <div class="login"></div>
     </div>
     <div class="todayTask">
@@ -58,7 +65,6 @@
         <h2>오늘의 작심</h2>
       </div>
       <ul class="jaksim_today_ul"></ul>
-      <button class="add_jaksim_today_btn">작심 추가</button>
     </div>
     <div class="oftenTask">
       <section class="frequent_jaksim">
@@ -66,18 +72,24 @@
           <h2 class="frequent_title">자주 쓰는 작심</h2>
         </div>
         <ul class="frequent_jaksim_ul"></ul>
-        <div class="frequent_buttons">
-          <button class="frequent_button frequent_add_button">+</button>
-        </div>
       </section>
     </div>
     <div class="wiseTalk">
-      <h2><br />오늘의 명언</h2>
+      <div class="nowText">
+        <h2>오늘의 명언</h2>
+      </div>
+      <h3 id="text" style="text-align: center">
+        성공이란 넘어지는 횟수보다 한 번 더 일어서는 것이다.
+      </h3>
     </div>
     <div class="todayState">
       <div class="todayMood">
         <h2>오늘의 기분</h2>
-        <div class="emoji">😁 😐 🙁 😡</div>
+        <div class="emoji_list">
+          <span class="selected_emoji">😁</span><span class="emoji">😐</span
+          ><span class="emoji">🙁</span><span class="emoji">😡</span
+          ><span class="emoji">🤔</span><span class="emoji">😭</span>
+        </div>
       </div>
       <div class="todayScore">
         <h2>오늘의 점수</h2>
