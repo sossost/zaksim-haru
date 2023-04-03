@@ -5,7 +5,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
-  height: 300px;
+  height: 330px;
   background-color: white;
   border-radius: 15px;
   display: flex;
@@ -93,7 +93,7 @@
   box-sizing: border-box;
   border: 2px solid rgb(209, 209, 209);
   border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .jaksim_today_modal_input_div:focus-within {
@@ -114,6 +114,32 @@
   font-size: 16px;
   border: none;
   color: #2fb999;
+}
+
+.frequent_jaksim_add_check {
+  display: flex;
+  margin-bottom: 20px;
+  color: #39d1ad;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+input[id="frequent_jaksim_add_check"] + label {
+  display: inline-block;
+  border: 2px solid #39d1ad;
+  border-radius: 14px;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+}
+
+input[id="frequent_jaksim_add_check"]:checked + label {
+  background-color: #39d1ad;
+}
+
+#frequent_jaksim_add_check {
+  display: none;
 }
 
 .jaksim_today_modal_submit_btn {

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./style/modal.css" />
     <link rel="stylesheet" href="./style/FrequentJaksim.css" />
+    <link rel="stylesheet" href="./style/JaksimToday.css" />
     <!-- <link rel="stylesheet" href="./style/jaksimToday.css" /> -->
     <script type="module" src="./src/jaksim.js"></script>
     <script type="module" src="./src/jaksimInputModal.js" defer></script>
@@ -37,20 +38,24 @@
             placeholder="오늘의 작심을 입력해주세요."
           />
         </div>
+        <label class="frequent_jaksim_add_check">
+          <input type="checkbox" id="frequent_jaksim_add_check" />
+          <label for="frequent_jaksim_add_check"></label>
+          <span>자주쓰는 작심으로도 추가</span>
+        </label>
         <div class="jaksim_today_modal_submit_btn">
           <button>추가</button>
         </div>
       </form>
     </div>
     <!-- 모달창 영역 -->
-
     <div class="header">
       <h1>작심 하루</h1>
       <div class="login"></div>
     </div>
     <div class="todayTask">
-      <div>
-        <h1>Today List</h1>
+      <div class="jaksim_today_title">
+        <h2>오늘의 작심</h2>
       </div>
       <ul class="jaksim_today_ul"></ul>
       <button class="add_jaksim_today_btn">작심 추가</button>
@@ -58,42 +63,11 @@
     <div class="oftenTask">
       <section class="frequent_jaksim">
         <div class="frequent_header">
-          <h1 class="frequent_title">자주 쓰는 작심</h1>
+          <h2 class="frequent_title">자주 쓰는 작심</h2>
         </div>
         <ul class="frequent_jaksim_ul"></ul>
-
         <div class="frequent_buttons">
-          <div class="frequent_default"></div>
-
-          <div>
-            <button class="frequent_button frequent_add_button">+</button>
-            <!-- <form class="frequent_form hidden">
-              <input
-                placeholder="작심을 입력해주세요(1 ~ 20자)"
-                type="text"
-                maxlength="20"
-                minlength="1"
-                class="frequent_input"
-                required
-              />
-
-              <div>
-                <button
-                  class="frequent_form_btn"
-                  id="frequent_add_btn"
-                  type="button"
-                >
-                  추가
-                </button>
-                <button
-                  class="frequent_form_btn frequent_cancel_btn"
-                  type="reset"
-                >
-                  취소
-                </button>
-              </div>
-            </form> -->
-          </div>
+          <button class="frequent_button frequent_add_button">+</button>
         </div>
       </section>
     </div>
@@ -112,7 +86,10 @@
       <div class="diary">
         <h2>오늘의 일기</h2>
         <div class="diaryTxt">
-          <input type="text" name="diarytxt" id="diaryTxt" />
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, a at.
+          Dicta excepturi animi quas possimus alias? Similique, excepturi
+          dignissimos? Non hic, ea dolorem sint voluptas nemo consequuntur minus
+          omnis!
         </div>
       </div>
     </div>
