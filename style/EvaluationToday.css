@@ -46,9 +46,29 @@ div.todayState h2 {
   display: flex;
   flex-direction: column;
 }
-.diaryTxt {
+.diary_content {
   padding: 8px;
 }
+
+.diary_textarea {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  border: none;
+  font-family: "Daheng";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/naverfont_02@1.0/Daheng.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+
+.diary_paragraph {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+}
+
 #diaryTxt {
   height: 100%;
   width: 100%;

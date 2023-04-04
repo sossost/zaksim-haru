@@ -3,6 +3,7 @@ import {
   updateJaksimToday,
   deleteJaksimToday,
 } from "./helper/JaksimTodayApi.js";
+import { renderPot } from "./pot.js";
 
 /** 오늘의 작심 li 클릭시 done클래스를 토글하여 체크 표시, 텍스트에 가로줄 생성 하는 함수**/
 async function jaksimTodayClickHandler(e) {
@@ -19,6 +20,7 @@ async function jaksimTodayClickHandler(e) {
     await updateJaksimToday(selectedJaksimTodayId, isDone); // 선택한 li의 id와 done 데이터를 전달
 
     renderJaksimTodayList();
+    renderPot();
   }
 }
 
@@ -30,6 +32,7 @@ async function jaksimTodayCrossClickHandler(e) {
     ) {
       await deleteJaksimToday(selectedJaksimTodayId);
       renderJaksimTodayList();
+      renderPot();
     } else {
       return;
     }
