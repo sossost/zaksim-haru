@@ -14,15 +14,12 @@ export const renderPot = async () => {
     (jaksim) => jaksim.isDone === true
   );
 
-  const completedSunNumber = completedJaksimList.filter(
-    (jaksim) => jaksim.fiture === "sun"
-  ).length;
-  const completedWaterNumber = completedJaksimList.filter(
-    (jaksim) => jaksim.fiture === "water"
-  ).length;
-  const completedPillNumber = completedJaksimList.filter(
-    (jaksim) => jaksim.fiture === "pill"
-  ).length;
+  const completedJaksimByFeature = (feature) =>
+    completedJaksimList.filter((jaksim) => jaksim.feature === feature);
+
+  const completedWaterNumber = completedJaksimByFeature("water").length;
+  const completedSunNumber = completedJaksimByFeature("sun").length;
+  const completedPillNumber = completedJaksimByFeature("pill").length;
 
   waterProcessivity.innerText =
     Math.floor((completedWaterNumber / waterGoalNumber) * 100) + "%";

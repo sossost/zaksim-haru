@@ -1,4 +1,4 @@
-.fiture_processivity {
+.feature_processivity {
   position: relative;
   top: 0px;
   right: 0px;
@@ -6,26 +6,26 @@
   font-size: 22px;
 }
 
-.fiture_processivity_water {
+.feature_processivity_water {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 28px;
 }
-.fiture_processivity_sun {
+.feature_processivity_sun {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 28px;
 }
-.fiture_processivity_pill {
+.feature_processivity_pill {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 28px;
 }
 
-.fiture_processivity span {
+.feature_processivity span {
   text-align: end;
   padding-bottom: 6px;
 }

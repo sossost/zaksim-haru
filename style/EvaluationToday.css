@@ -45,14 +45,16 @@ div.todayState h2 {
   font-size: 20px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 .diary_content {
+  height: 100%;
   padding: 8px;
 }
 
 .diary_textarea {
   width: 100%;
-  height: 150px;
+  height: 100%;
   resize: none;
   border: none;
   font-family: "Daheng";
@@ -65,7 +67,7 @@ div.todayState h2 {
 
 .diary_paragraph {
   width: 100%;
-  height: 150px;
+  height: 100%;
   font-size: 20px;
 }
 

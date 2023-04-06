@@ -6,29 +6,31 @@ import {
 import { saveJaksimToday } from "./helper/JaksimTodayApi.js";
 import { hideModal } from "./helper/ModalControl.js";
 
-const waterFitureBtn = document.querySelector("#water");
-const sunFitureBtn = document.querySelector("#sun");
-const pillFitureBtn = document.querySelector("#pill");
-const fitureInputEl = document.querySelector(".jaksim_today_modal_color_check");
+const waterfeatureBtn = document.querySelector("#water");
+const sunfeatureBtn = document.querySelector("#sun");
+const pillfeatureBtn = document.querySelector("#pill");
+const featureInputEl = document.querySelector(
+  ".jaksim_today_modal_color_check"
+);
 const modalSubmitBtn = document.querySelector(".jaksim_today_modal_submit_btn");
 
 /* 라디오버튼 선택 핸들러 함수 */
-const fitureClickHandler = (fiture) => {
-  waterFitureBtn.classList.remove("clicked");
-  sunFitureBtn.classList.remove("clicked");
-  pillFitureBtn.classList.remove("clicked");
+const featureClickHandler = (feature) => {
+  waterfeatureBtn.classList.remove("clicked");
+  sunfeatureBtn.classList.remove("clicked");
+  pillfeatureBtn.classList.remove("clicked");
   // 각 버튼들 clicked css 초기화
 
-  if (fiture === "water") {
-    waterFitureBtn.classList.add("clicked");
-  } else if (fiture === "sun") {
-    sunFitureBtn.classList.add("clicked");
-  } else if (fiture === "pill") {
-    pillFitureBtn.classList.add("clicked");
+  if (feature === "water") {
+    waterfeatureBtn.classList.add("clicked");
+  } else if (feature === "sun") {
+    sunfeatureBtn.classList.add("clicked");
+  } else if (feature === "pill") {
+    pillfeatureBtn.classList.add("clicked");
   }
   // 매개변수로 받은 특징 clicked css 활성화
 
-  fitureInputEl.setAttribute("value", fiture);
+  featureInputEl.setAttribute("value", feature);
   // 클릭한 특징 부모 div value에 저장
 };
 
@@ -40,7 +42,7 @@ const modalSubmitHandler = async (e) => {
   const jaksimInputValue = document.querySelector(
     ".jaksim_today_modal_input"
   ).value;
-  const jaksimFitureValue = fitureInputEl.getAttribute("value");
+  const jaksimfeatureValue = featureInputEl.getAttribute("value");
   const jaksimDate = new Date().toLocaleDateString();
   const frequentJaksimIsChecked = document.getElementById(
     "frequent_jaksim_add_check"
@@ -56,14 +58,14 @@ const modalSubmitHandler = async (e) => {
    오늘의 작심과 자주쓰는 작심의 필요한 데이터가 달라서 따로저장 */
   const jaksimTodayData = {
     jaksim: jaksimInputValue,
-    fiture: jaksimFitureValue,
+    feature: jaksimfeatureValue,
     date: jaksimDate,
     isDone: false,
   };
 
   const frequentJaksimData = {
     jaksim: jaksimInputValue,
-    fiture: jaksimFitureValue,
+    feature: jaksimfeatureValue,
   };
 
   // 체크 여부에따라 양쪽 or 한쪽에 fetch
@@ -83,13 +85,13 @@ const modalSubmitHandler = async (e) => {
   hideModal();
 };
 
-waterFitureBtn.addEventListener("click", () => {
-  fitureClickHandler("water");
+waterfeatureBtn.addEventListener("click", () => {
+  featureClickHandler("water");
 });
-sunFitureBtn.addEventListener("click", () => {
-  fitureClickHandler("sun");
+sunfeatureBtn.addEventListener("click", () => {
+  featureClickHandler("sun");
 });
-pillFitureBtn.addEventListener("click", () => {
-  fitureClickHandler("pill");
+pillfeatureBtn.addEventListener("click", () => {
+  featureClickHandler("pill");
 });
 modalSubmitBtn.addEventListener("click", modalSubmitHandler);

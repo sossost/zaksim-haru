@@ -12,11 +12,11 @@ import {
 async function frequentJaksimClickHandler(e) {
   if (e.target.className.includes("frequent_jaksim_click_area")) {
     const jaksim = e.target.innerText;
-    const fiture = e.target.parentElement.classList[1];
+    const feature = e.target.parentElement.classList[1];
     const date = new Date().toLocaleDateString();
     const isDone = false;
 
-    const data = { jaksim, fiture, date, isDone };
+    const data = { jaksim, feature, date, isDone };
 
     const jaksimTodayList = await getJaksimTodayList();
     if (jaksimTodayList.find((data) => data.jaksim === jaksim)) {
@@ -32,11 +32,11 @@ async function frequentJaksimClickHandler(e) {
 
 async function frequentJaksimCrossClickHandler(e) {
   if (e.target.className === "delete_frequent_jaksim_btn") {
-    const selectedFrequentJaksimId = e.target.parentElement.id;
-    if (
-      confirm(`정말 ${e.target.parentElement.innerText}를 삭제하시겠습니까?`)
-    ) {
-      deleteFrequentJaksim(selectedFrequentJaksimId);
+    const id = e.target.parentElement.id;
+    const jaksim = e.target.parentElement.innerTex;
+
+    if (confirm(`정말 ${jaksim}를 삭제하시겠습니까?`)) {
+      deleteFrequentJaksim(id);
       renderFrequentJaksimList();
     } else {
       return;

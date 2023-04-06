@@ -9,15 +9,13 @@ function emojiClickHandler(e) {
 }
 
 function diaryParagrapthClickHandler(e) {
-  // if (e.target.className === "diray_paragraph") {
   const content = e.target.innerText;
   document.querySelector(
     ".diary_content"
   ).innerHTML = `<textarea class="diary_textarea" >${content}</textarea>`;
-  // }
   const diaryTextarea = document.querySelector(".diary_textarea");
-  diaryTextarea.focus();
 
+  diaryTextarea.focus();
   diaryTextarea.addEventListener("focusout", diaryTextareaFocusoutHandler);
 }
 
@@ -28,9 +26,9 @@ function diaryTextareaFocusoutHandler(e) {
   ).innerHTML = `<p class ="diary_paragraph">${content}</p>`;
 
   const diaryParagraph = document.querySelector(".diary_paragraph");
+
   diaryParagraph.addEventListener("click", diaryParagrapthClickHandler);
 }
 
 document.addEventListener("click", emojiClickHandler);
-// document.addEventListener("click", diaryParagrapthClickHandler);
 diaryParagraph.addEventListener("click", diaryParagrapthClickHandler);

@@ -13,7 +13,7 @@ export const renderFrequentJaksimList = async () => {
   frequentJaksimData.map((data) =>
     frequentJaksimList.push(
       // frequentJaksimList 빈배열에 받아온 데이터를 HTML 엘리먼트로 넣음
-      `<li id="${data.id}" class="frequent_jaksim_li ${data.fiture}">
+      `<li id="${data.id}" class="frequent_jaksim_li ${data.feature}">
           <div class="frequent_jaksim_click_area">
               <span>${data.jaksim}</span>
           </div>
@@ -44,7 +44,7 @@ export const renderJaksimTodayList = async () => {
       // jaksimTodayList라는 빈배열에 HTML 엘리먼트로 넣음
       `<li id="${data.id}" class="jaksim_today_li ${data.isDone ? "done" : ""}">
           <div class="jaksim_today_click_area">
-             <div class="jaksim_today_checkbox ${data.fiture}">
+             <div class="jaksim_today_checkbox ${data.feature}">
                 ${data.isDone ? "ㅇ" : ""}
              </div>
              <span>${data.jaksim}</span>

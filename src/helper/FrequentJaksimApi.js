@@ -12,7 +12,7 @@ export const getFrequentJaksim = async () => {
     frequentJaksimList.push({
       id: key,
       jaksim: data[key].jaksim,
-      fiture: data[key].fiture,
+      feature: data[key].feature,
     });
   } // fetch로 받아온 data를 빈배열에 객체로 만들어서 넣어줘야함
 

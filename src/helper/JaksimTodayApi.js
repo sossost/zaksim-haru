@@ -12,7 +12,7 @@ export const getJaksimTodayList = async () => {
     jaksimTodayList.push({
       id: key,
       jaksim: data[key].jaksim,
-      fiture: data[key].fiture,
+      feature: data[key].feature,
       date: data[key].date,
       isDone: data[key].isDone,
     });
