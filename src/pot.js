@@ -55,18 +55,26 @@ export const renderPot = async () => {
   const completedAllJaksimRate =
     completedWaterRate + completedSunRate + completedPillRate;
 
+  function toggleClass(number) {
+    for (let i = 0; i < 6; i++) {
+      potContentEl.children[i].classList.add("hide");
+    }
+    potContentEl.children[number].classList.remove("hide");
+    potContentEl.children[number].classList.add("show");
+  }
+
   if (completedAllJaksimRate < 60) {
-    potContentEl.innerHTML = `<img src="./public/flower1.png" alt="flower1" />`;
+    toggleClass(0);
   } else if (completedAllJaksimRate < 120) {
-    potContentEl.innerHTML = `<img src="./public/flower2.png" alt="flower2" />`;
+    toggleClass(1);
   } else if (completedAllJaksimRate < 180) {
-    potContentEl.innerHTML = `<img src="./public/flower3.png" alt="flower3" />`;
+    toggleClass(2);
   } else if (completedAllJaksimRate < 240) {
-    potContentEl.innerHTML = `<img src="./public/flower4.png" alt="flower4" />`;
+    toggleClass(3);
   } else if (completedAllJaksimRate < 300) {
-    potContentEl.innerHTML = `<img src="./public/flower5.png" alt="flower5" />`;
+    toggleClass(4);
   } else if (completedAllJaksimRate === 300) {
-    potContentEl.innerHTML = `<img src="./public/flower6.png" alt="flower6" />`;
+    toggleClass(5);
   }
 
   // 각 특징별 작심 달성률 렌더링
