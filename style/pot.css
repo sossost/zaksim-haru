@@ -1,9 +1,22 @@
+.pot_content {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.pot_content > img {
+  height: 250px;
+}
+
 .feature_processivity {
   position: relative;
+  display: inline;
   top: 0px;
   right: 0px;
-  width: 64px;
+  width: 25%;
   font-size: 22px;
+  align-items: flex-start;
 }
 
 .feature_processivity_water {
@@ -28,4 +41,12 @@
 .feature_processivity span {
   text-align: end;
   padding-bottom: 6px;
+}
+
+.pot_content {
+  position: relative;
+}
+
+.pot_content > img {
+  height: 250px;
 }

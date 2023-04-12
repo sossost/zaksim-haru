@@ -33,10 +33,10 @@ async function frequentJaksimClickHandler(e) {
 async function frequentJaksimCrossClickHandler(e) {
   if (e.target.className === "delete_frequent_jaksim_btn") {
     const id = e.target.parentElement.id;
-    const jaksim = e.target.parentElement.innerTex;
+    const jaksim = e.target.parentElement.innerText;
 
     if (confirm(`정말 ${jaksim}를 삭제하시겠습니까?`)) {
-      deleteFrequentJaksim(id);
+      await deleteFrequentJaksim(id);
       renderFrequentJaksimList();
     } else {
       return;
